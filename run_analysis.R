@@ -105,5 +105,5 @@ write.csv(merged_data, file = "./data/project_course3/UCI_HAR_Dataset/Answers/me
 new_table <- aggregate(.~subject+activity_label, merged_data, mean)
 
 if (!file.exists("./data/project_course3/UCI_HAR_Dataset/Answers")) {dir.create("./data/project_course3/UCI_HAR_Dataset/Answers")}
-write.csv(merged_data, file = "./data/project_course3/UCI_HAR_Dataset/Answers/New_tidy_data_grouped.csv")
+write.csv(new_table, file = "./data/project_course3/UCI_HAR_Dataset/Answers/New_tidy_data_grouped.csv")
 
