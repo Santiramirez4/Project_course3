@@ -1,29 +1,29 @@
 # Variables definition
 
-**url:** has the URL where the ZIP file is located
-**activity_labels_route**: Route for activity_labels
-**features_route:** Route for features_route
-**test_X_route:** Route for test_X
-**test_Y_route: ** Route for test_Y
-**train_X_route:** Route for train_X
-**train_Y_route:** Route for train_Y
-**subject_test_route:** Route for subject_test
-**subject_train_route:** Route for subject_train
-**activity_label:** New Variable added to y_test and y_train
-**counter:** variable used in the while loop to know when the complete data has been evaluated
-**value:** Variable to store the Id of the activity
-**test_data:** Variable where the Merge of the data related with TEST is stored
-**y_test_size:** get the length of the table y_test
-**y_train_size:** get the length of the table y_train
-**trainning_data:** Variable where the Merge of the data related with TRAINNING is stored
-**merged_data:** Variable where both the complete test and trainning information has been merged
-**features_filtered:** Variable to store the index where the key words "std"and "mean" where found within "features"
-**new_table:** Table created to answer the last point. New table filtering by Subject and Activity and showing the Average value of each variable
+* *url:* has the URL where the ZIP file is located.
+* *activity_labels_route*: Route for activity_labels
+* *features_route:* Route for features_route
+* *test_X_route:* Route for test_X
+* *test_Y_route: * Route for test_Y
+* *train_X_route:* Route for train_X
+* *train_Y_route:* Route for train_Y
+* *subject_test_route:* Route for subject_test
+* *subject_train_route:* Route for subject_train
+* *activity_label:* New Variable added to y_test and y_train
+* *counter:* variable used in the while loop to know when the complete data has been evaluated
+* *value:* Variable to store the Id of the activity
+* *test_data:* Variable where the Merge of the data related with TEST is stored
+* *y_test_size:* get the length of the table y_test
+* *y_train_size:* get the length of the table y_train
+* *trainning_data:* Variable where the Merge of the data related with TRAINNING is stored
+* *merged_data:* Variable where both the complete test and trainning information has been merged
+* *features_filtered:* Variable to store the index where the key words "std"and "mean" where found within "features"
+* *new_table:* Table created to answer the last point. New table filtering by Subject and Activity and showing the Average value of each variable
 
 # Transformations
 activity_label <- select(activity_label, V2) # Second column has the activity information
 
-**Data Highlights**
+*Data Highlights*
 * There are 561 Features, which match with the amount of variables existing in the TEST and the Training.
 Therefore, the FEATURES correspond to the TEST and TRAIN variables NAMES
 names(X_test) = features$V2 # Give the variable names to x_test
