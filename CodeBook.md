@@ -30,9 +30,9 @@ names(X_test) = features$V2 # Give the variable names to x_test
 names(X_train) = features$V2 # Give the variable names to x_train
 
 Activiy_label has the 6 activities performed. y_test & y_train has values from 1 to 6, which correspond to the
-# activitiy names. Each number correspond to one Activity.
-#A new variable will be added to y_test and y_train with the corresponding activity label
-y_test <- mutate(y_test, activity_label = NA)
+**ctivitiy names. Each number correspond to one Activity.**
+### A new variable will be added to y_test and y_train with the corresponding activity label
+''y_test <- mutate(y_test, activity_label = NA)''
 names(y_test) <- c("Activity_id", "activity_label")
 
 #Give a proper name to variable in " subject_Test"
