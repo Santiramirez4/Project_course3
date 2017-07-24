@@ -1,6 +1,16 @@
 # Project_course3
 Data Science Specialization. Final Project Course 3 - Getting and Cleanning Data
 
+## Important Note
+The ZIP file has to be downloaded and saved in the computer. The Folders and file locations are defined in the code --> See run_analysis.
+Please make sure the SAMSUNG data analsysis is stored as per indicated in the paths
+
+** Only for reference - How to download the ZIP **
+### The folders were reorganized after unziped
+url <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
+download.file(url, destfile = "./data/project_course3/HAR.zip", mode = "wb") # "wb" means "write binary," and is used for binary files
+unzip(zipfile = "./data/project_course3/HAR.zip") # unpack the files into subdirectories
+
 ## PROJECT DELIVERABLES 
  1) a tidy data set as described below
  2) a link to a Github repository with your script for performing the analysis, and
