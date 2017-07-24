@@ -3,11 +3,6 @@ library(data.table)
 library(dplyr)
 rm(list = ls())
 
-
-url <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
-download.file(url, destfile = "./data/project_course3/HAR.zip", mode = "wb") # "wb" means "write binary," and is used for binary files
-unzip(zipfile = "./data/project_course3/HAR.zip") # unpack the files into subdirectories
-
 # First steps is to load the different documents
 #Routes definition --> NOTE: For validation, please use this ROUTES for storing the files
 activity_labels_route <- "./data/project_course3/UCI_HAR_Dataset/activity_labels.txt"
@@ -98,12 +93,12 @@ features_filtered <- grepl("mean|std", features$V2) # Look into the second varia
 merged_data <- merged_data[, features_filtered]
 
 if (!file.exists("./data/project_course3/UCI_HAR_Dataset/Answers")) {dir.create("./data/project_course3/UCI_HAR_Dataset/Answers")}
-write.csv(merged_data, file = "./data/project_course3/UCI_HAR_Dataset/Answers/merged_data.csv")
+write.table(merged_data, file = "./data/project_course3/UCI_HAR_Dataset/Answers/merged_data.txt", row.names = FALSE)
 
 # Creates a new independent table grouped by Subject and Activity and showing its Average
 
 new_table <- aggregate(.~subject+activity_label, merged_data, mean)
 
 if (!file.exists("./data/project_course3/UCI_HAR_Dataset/Answers")) {dir.create("./data/project_course3/UCI_HAR_Dataset/Answers")}
-write.csv(new_table, file = "./data/project_course3/UCI_HAR_Dataset/Answers/New_tidy_data_grouped.csv")
+write.table(new_table, file = "./data/project_course3/UCI_HAR_Dataset/Answers/New_tidy_data_grouped.txt", row.names = FALSE)
 
